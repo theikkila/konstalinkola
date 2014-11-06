@@ -2,12 +2,13 @@
 <html class="no-js" ng-app="konstasite">
   <head>
     <meta charset="utf-8">
-    <title>frontend</title>
+    <title>Konsta Linkola Photography</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp,app}) styles/vendor.css -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="app/vendor.css">
 
     <!-- bower:css -->
@@ -26,7 +27,8 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <h1 id="title">Konsta Linkola Photography</h1>
+    <navbar></navbar>
     <div ui-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -50,13 +52,25 @@
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/get-style-property/get-style-property.js"></script>
+    <script src="bower_components/get-size/get-size.js"></script>
+    <script src="bower_components/eventie/eventie.js"></script>
+    <script src="bower_components/doc-ready/doc-ready.js"></script>
+    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+    <script src="bower_components/matches-selector/matches-selector.js"></script>
+    <script src="bower_components/outlayer/item.js"></script>
+    <script src="bower_components/outlayer/outlayer.js"></script>
+    <script src="bower_components/masonry/masonry.js"></script>
+    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+    <script src="bower_components/angular-masonry/angular-masonry.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({src,.tmp}) scripts/app.js -->
     <script src="app/index.js"></script>
     <script src="app/main/main.controller.js"></script>
-    <script src="components/navbar/navbar.controller.js"></script>
+    <script src="components/navbar/navbar.directive.js"></script>
 
     <!-- inject:partials -->
     <!-- angular templates will be automaticaly converted in js and inserted here -->
