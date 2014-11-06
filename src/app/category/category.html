@@ -1,0 +1,11 @@
+<h2>{{data.title}}</h2>
+
+<p>{{category.body}}</p>
+
+<div id="columns">
+  <div class="pin" ng-repeat="image in category.images">
+  	<a ui-sref="project({id:image.project})">
+    	<img ng-src="{{image.src}}" alt="{{image.alt}}">
+  	</a>
+  </div>
+</div>

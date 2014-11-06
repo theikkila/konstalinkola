@@ -10,11 +10,13 @@ angular.module('konstasite', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     });
     sp.state('adventure', {
         url: '/adventure',
+        data: {title: "Adventure"},
         templateUrl: 'app/category/category.html',
     	controller: 'CategoryCtrl'
     });
     sp.state('portraits', {
         url: '/portraits',
+        data: {title: "Portraits"},
         templateUrl: 'app/category/category.html',
     	controller: 'CategoryCtrl'
     });
@@ -24,9 +26,14 @@ angular.module('konstasite', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     	controller: 'AboutCtrl'
     });
     sp.state('contact', {
-        url: '/',
+        url: '/contact',
         templateUrl: 'app/contact/contact.html',
     	controller: 'ContactCtrl'
+    });
+    sp.state('project', {
+        url: '/project/:id',
+        templateUrl: 'app/project/project.html',
+        controller: 'ProjectCtrl'
     });
     $urlRouterProvider.otherwise('/');
   })
