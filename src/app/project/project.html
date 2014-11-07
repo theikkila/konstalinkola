@@ -1,7 +1,11 @@
 <h1>Project <small>{{project}}</small></h1>
 
 <div id="columns">
-  <div class="pin" ng-repeat="image in images">
+  <div class="pin {{image.class}}" ng-repeat="image in images">
+  	<figure>
     <img ng-src="{{image.src}}" alt="{{image.alt}}">
+    <h4>{{image.alt}}</h4>
+  	</figure>
   </div>
 </div>
+

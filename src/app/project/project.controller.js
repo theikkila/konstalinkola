@@ -9,6 +9,6 @@ angular.module('konstasite')
       var y = Math.floor(Math.random()*200)+300;
       x = x - x%10;
       y = y - y%10;
-      $scope.images.push({src:"http://fpoimg.com/"+x+"x"+y+"?text="+$stateParams.id, alt: "Konsta Linkola"});
+      $scope.images.push({src:"http://lorempixel.com/"+x+"/"+y, alt: $stateParams.id});
     };
   });

@@ -2,10 +2,14 @@
 
 <p>{{category.body}}</p>
 
+
 <div id="columns">
-  <div class="pin" ng-repeat="image in category.images">
+  <div class="pin {{image.class}}" ng-repeat="image in category.images">
   	<a ui-sref="project({id:image.project})">
-    	<img ng-src="{{image.src}}" alt="{{image.alt}}">
+  	<figure>
+    <img ng-src="{{image.src}}" alt="{{image.alt}}">
+    <h4>{{image.project}}</h4>
+  	</figure>
   	</a>
   </div>
 </div>
